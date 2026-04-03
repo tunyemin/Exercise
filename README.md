@@ -1,1 +1,1 @@
-# Day-1-Exercise
+# Exercise
