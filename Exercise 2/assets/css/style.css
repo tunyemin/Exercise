@@ -1,0 +1,130 @@
+*   {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: orange;
+    color: aliceblue;
+    align-items: center;
+    padding: 20px;
+   
+
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    
+    
+}
+
+header a {
+     text-decoration:none ;
+     color: white;
+     font-size: 20px;
+}
+
+
+nav li {
+     margin: 0 10px;
+}
+
+.banner {
+    background-image: url("../image/looking.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.banner h2 {
+     color: black;
+}
+
+.bp {
+    color: yellow
+}
+
+.btn {
+    background-color: orange;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 20px;
+}
+
+.sec-title {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    padding: 0 20px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.faq-header {
+    background-color: #ff6633;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.faq-body {
+    padding: 20px;
+    background-color: #fff;
+    color: #555;
+    font-size: 14px;
+}
+
+.invoice-container {
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    padding: 0 20px;
+}
+
+.invoice-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.invoice-table th {
+    background-color: #e0e0e0;
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+.invoice-table td {
+    padding: 12px;
+    border: 1px solid #eee;
+}
+
+.text-right {
+    text-align: left;
+    background-color:#e0e0e0 ;
+}
+footer {
+    background-color: green;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 15px;
+}
