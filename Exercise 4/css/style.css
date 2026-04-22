@@ -1,0 +1,536 @@
+/* Google Fonts ထည့်သွင်းခြင်း */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+    --primary-color: #F07154;
+    --bg-dark: #22343D;
+    --section-bg: #FFF7F3; /* Main section color */
+    --footer-bg: #FFF0EE;  /* Footer color */
+    --white: #ffffff;
+    --text-dark: #333;
+    --text-gray: #666;
+    --fonts-roboto: "Roboto", sans-serif;
+    --fonts-archivo: "Archivo", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+/* 
+   1. Navbar 
+ */
+.navbar {
+   display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px; 
+    background-color: transparent; 
+    color: var(--white);
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+    
+    
+}
+
+.logo-icon {
+    background-color: var(--primary-color);
+    color: white;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+/* Mobile Menu Hidden feature */
+.nav-links, .auth-buttons {
+    display: none; 
+}
+
+/* Hamburger Icon */
+.menu-toggle {
+    display: none;
+}
+.hamburger {
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Mobile Menu Open */
+.menu-toggle:checked ~ .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 20px;
+    z-index: 100;
+}
+.menu-toggle:checked ~ .nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* 
+   2. banner Section
+ */
+.banner {
+    
+    background-image:  url('../images/images/one.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    text-align: center;
+    align-items: center;
+    height: 100vh;
+    padding: 120px 20px; 
+    
+}
+
+.banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    padding-top: 120px;
+}
+
+.banner p {
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-inline: auto;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* =========================================
+   3. Categories
+========================================= */
+.categories {
+    display: flex;
+    flex-direction: column; /* Mobile mhr ta khu chin si vertical pya pho use */
+    gap: 20px;
+    padding: 20px;
+    margin-top: -60px;
+    background-color: var(--section-bg); /*section color */
+}
+
+.category-card {
+    background: var(--white);
+    padding: 30px 20px;
+    border-radius: 20px; 
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    width: 100%; 
+}
+
+.category-card .icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.category-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.category-card p {
+    font-size: 0.85rem;
+    color: var(--text-gray);
+}
+
+/*
+   4. Destinations (Cards Grid) a pai
+ */
+.destinations {
+    padding: 50px 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.title-icon {
+    font-size: 30px;
+    color: var(--primary-color);
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile view: 1 column */
+    gap: 30px;
+}
+
+.card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.card-image {
+    position: relative;
+    height: 200px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.heart-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.heart-btn {
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    width: 35px;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: #666;
+}
+
+.price {
+    background: var(--white);
+    color: var(--primary-color);
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card-content h3 {
+    font-size: 1.1rem;
+    margin: 15px 0 10px;
+}
+
+.card-content p {
+    font-size: 0.85rem;
+    color: var(--text-gray);
+    margin-bottom: 20px;
+}
+
+.btn-readmore {
+    background: #f5f5f5;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    color: var(--text-dark);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-readmore:hover {
+    background: #e0e0e0;
+}
+
+.view-all-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn-viewall {
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 10px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+/* 
+   5. Newsletter a pai
+ */
+.newsletter-wrapper {
+    padding: 20px;
+}
+
+.newsletter-box {
+    background: #FFEDEC;
+    border-radius: 20px;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.newsletter-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.newsletter-text p {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    margin-bottom: 25px;
+}
+
+.email-form {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 5px;
+    border-radius: 30px;
+    max-width: 400px;
+    margin: 0 auto 30px;
+}
+
+.email-form i {
+    padding: 0 15px;
+    color: #999;
+}
+
+.email-form input {
+    border: none;
+    /* outline: none; */
+    /* flex-grow: 1; */
+    padding: 10px 0;
+}
+
+.btn-submit {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    width: 45px; 
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.btn-submit:hover {
+   transform: scale(1.1);
+    background-color: #e0634a; /* Hover click yin color yint aung */
+}
+
+/* =========================================
+   6. Footer
+========================================= */
+footer {
+    background-color: var(--footer-bg) !important; /* Footer specific color */
+    padding: 50px 20px 20px;
+    border-top: none;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.footer-col h4 {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.footer-col p, .footer-col a {
+    font-size: 0.85rem;
+    color: var(--text-gray);
+    line-height: 1.8;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.download-apps {
+    margin-top: 20px;
+}
+
+.app-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.app-btn {
+    background: black;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    font-size: 0.8rem;
+    color: var(--text-gray);
+}
+
+/* =========================================
+   7. Desktop View (Media Queries)
+========================================= */
+@media (min-width: 768px) {
+  /* Navbar Desktop */
+    .navbar {
+        padding: 25px 50px;
+    }
+    
+    .hamburger {
+        display: none;
+    }
+    
+    .nav-links {
+        display: flex;
+        gap: 25px;
+        margin-left: 40px; 
+    }
+    
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 0.9rem;
+    }
+    
+    .auth-buttons {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-left: auto; 
+    }
+    
+    .btn-text {
+        color: white;
+        text-decoration: none;
+    }
+    
+    .btn-outline {
+        border: 1px solid white;
+        color: white;
+        padding: 8px 20px;
+        border-radius: 20px;
+        text-decoration: none;
+    }
+
+    /* banner Desktop */
+    .banner {
+        padding: 180px 50px 180px; 
+    }
+
+    
+
+    .banner h1 {
+        font-size: 4rem;
+    }
+    .banner p {
+        font-size: 1.1rem;
+    }
+
+    /* Categories Desktop */
+    .categories {
+        flex-direction: row; 
+        justify-content: center;
+    }
+
+    /* Destinations Desktop */
+    .destinations {
+        padding: 80px 50px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .cards-grid {
+        grid-template-columns: repeat(4, 1fr); 
+    }
+
+    /* Newsletter Desktop */
+    .newsletter-wrapper {
+        padding: 50px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .newsletter-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 50px;
+        text-align: left;
+    }
+    .newsletter-text {
+        flex: 1;
+        padding-right: 50px;
+    }
+    .email-form {
+        margin: 0;
+    }
+
+    /* Footer Desktop */
+    footer {
+        padding: 80px 50px 20px;
+    }
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .about-col {
+        flex: 2;
+        padding-right: 50px;
+    }
+    .footer-links {
+        display: flex;
+        flex: 3;
+        justify-content: space-between;
+    }
+}
